@@ -41,7 +41,7 @@
     // Create a variable called "map" to house your map
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'your-style-url' // replace this with your style URL
+      style: 'mapbox://styles/jm-dowl/cknxpa3rl23f517p6dzfpveim' // replace this with your style URL
       });
 
 
@@ -50,7 +50,41 @@
     // Add the information window
 
   </script>
+        // callback function
+        map.on('load', function() {
+        var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
+        var colors = ['#f1eef6', '#d4b9da', '#c994c7', '#df65b0', '#e7298a', '#ce1256', '#91003f', '#800026'];
+        for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+
+        var value = document.createElement('span');
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+        map.on('mousemove', function(e) {
+        var states = map.queryRenderedFeatures(e.point, {
+          layers: ['statedata']
+        });
+
+        if (states.length > 0) {
+          document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>' + states[0].properties.density + '</strong> people per square mile</em></p>';
+        } else {
+          document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+          }
+        });
+        map.getCanvas().style.cursor = 'default';
+        map.fitBounds([[-133.2421875, 16.972741], [-47.63671875, 52.696361]]);
+}
+
+    });
   </script>
 </body>
-
+</script>
+</body>
 </html>
