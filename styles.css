@@ -59,6 +59,11 @@ li a:hover {
  background-color: #a09f9f;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #AEADF0;
+}
 
 #map {
   position: relative;
@@ -73,7 +78,7 @@ li a:hover {
   right: 0;
   background: rgba(255, 255, 255, 0.8);
   margin-right: 20px;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   overflow: auto;
   border-radius: 3px;
 }
@@ -82,7 +87,7 @@ li a:hover {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   overflow: auto;
   border-radius: 3px;
 }
@@ -107,7 +112,7 @@ li a:hover {
   line-height: 18px;
   height: 150px;
   margin-bottom: 40px;
-  width: 100px;
+  width: 120px;
 }
 
 .legend-key {
