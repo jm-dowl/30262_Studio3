@@ -6,6 +6,30 @@ ul {
  background-color: gray;
 }
 
+h1 {
+  font-family: monospace;
+  color:#2D2A32
+}
+
+h2 {
+  font-family: monospace;
+}
+h3 {
+  font-family: monospace;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+}
+
 li {
  float: left;
  border-right: 2px solid white;
