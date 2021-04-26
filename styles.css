@@ -3,7 +3,7 @@ ul {
  margin: 1px;
  padding: 1px;
  overflow: hidden;
- background-color: white;
+ background-color: gray;
 }
 
 li {
@@ -17,6 +17,7 @@ li:last-child {
 }
 
 li a {
+  font-family: monospace;
  display: block;
  color: black;
  text-align: left;
