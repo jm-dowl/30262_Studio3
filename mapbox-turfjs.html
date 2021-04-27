@@ -178,75 +178,56 @@
     };
     // add library point feature as geojson
     var libraries = {
-      type: 'FeatureCollection',
-      features: [{
-          type: 'Feature',
-          properties: {
-            Name: 'Village Branch',
-            Address: '2185 Versailles Rd'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.548369, 38.047876]
-          }
+      {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87838959693909,
+          40.87438861307441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8944935798645,
+          40.88367735778351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89450967311859,
+          40.86298389667785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         },
-        {
-          type: 'Feature',
-          properties: {
-            Name: 'Northside Branch',
-            ADDRESS: '1733 Russell Cave Rd'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.47135, 38.079734]
-          }
-        },
-        {
-          type: 'Feature',
-          properties: {
-            Name: 'Central Library',
-            ADDRESS: '140 E Main St'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.496894, 38.045459]
-          }
-        },
-        {
-          type: 'Feature',
-          properties: {
-            Name: 'Beaumont Branch',
-            Address: '3080 Fieldstone Way'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.557948, 38.012502]
-          }
-        },
-        {
-          type: 'Feature',
-          properties: {
-            Name: 'Tates Creek Branch',
-            Address: '3628 Walden Dr'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.498679, 37.979598]
-          }
-        },
-        {
-          type: 'Feature',
-          properties: {
-            Name: 'Eagle Creek Branch',
-            Address: '101 N Eagle Creek Dr'
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [-84.442219, 37.999437]
-          }
-        }
-      ]
-    };
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8632270693779,
+          40.86681154883243
+        ]
+      }
+    }
+  ]
+}
 
     // add the geojson files to the map after the base map
     // this function determines the order to load the map layers
