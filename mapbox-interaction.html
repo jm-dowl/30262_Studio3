@@ -63,7 +63,7 @@
 
     // Add a popup: https://docs.mapbox.com/mapbox-gl-js/example/popup/
     var popup = new mapboxgl.Popup({ closeOnClick: false })
-      .setLngLat([-71.410414, 44.217290])
+      .setLngLat([-73.911651, 40.898168])
       .setHTML('<h1 style="text-align:center; font-size:20px; height:10px"><u>Welcome To</u></h1><h1 style="text-align:center; color:green; height:">White Mountain National Forest</h1>')
       .addTo(map);
 
@@ -75,7 +75,7 @@
     map.on('zoom', function(e){
       var zoomlevel = map.getZoom();
       if(zoomlevel > 12){
-      popup.setLngLat([-71.303187, 44.270284])
+      popup.setLngLat([-73.911651, 40.898168])
         .setHTML('<h1 style="text-align:center; font-size:16px; height:5px"><u>Mt. Washington</u></h1><h1 style="text-align:center; font-size:14px">Altitude: 6,288ft</h1>')
         .addTo(map);
       };
@@ -109,7 +109,7 @@
     document.getElementById('fly').addEventListener('click', function () {
       //fly to Mount Washington
         map.flyTo({
-            center: [-71.303187, 44.270284],
+            center: [-73.911651, 40.898168],
             zoom: [15],
             bearing: 180,
             pitch: 1,
@@ -121,7 +121,7 @@
     document.getElementById('pitch').addEventListener('click', function () {
         // Fly to location
         map.flyTo({
-            center: [-71.303187, 44.270284],
+            center: [-73.911651, 40.898168],
             zoom: [10],
             pitch: 60,
             bearing: 45,
