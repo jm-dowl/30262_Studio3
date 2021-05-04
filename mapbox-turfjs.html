@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Studio Week 3</title>
     <meta charset="utf-8" />
     <title>Demo: Analyze data with Turf.js and Mapbox GL JS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,21 +11,30 @@
       rel="stylesheet"
     />
     <script src="https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
-    <style>
+    <style type="text/css">
       body {
         margin: 0;
         padding: 0;
       }
+
       #map {
         position: absolute;
-        top: 0;
+        top: 200px;
         bottom: 0;
         width: 100%;
-      }
-    </style>
+      }  </style>
   </head>
   <body>
     <div id="map"></div>
+    <h1>Studio Week 3<br> Analyze data with Turf.js and Mapbox GL JS </h1>
+    <!-- active class displays the grey box around current page-->
+    <ul>
+      <li><a href="index.html" target="_self">Output 1</a></li>
+      <li><a class="active" href="mapbox-interaction.html" target="_self">Output 2</a></li>
+      <li><a href="mapbox-turfjs.html" target="_self">Output 3</a></li>
+    </ul>
+    <br>
+
     <script>
       mapboxgl.accessToken = 'pk.eyJ1Ijoiam0tZG93bCIsImEiOiJja25rc2VvOTMwYzF0MnZudjltMGh0dWpwIn0.-UcF1LG4oAox3A9YWUWs7w';
       var map = new mapboxgl.Map({
