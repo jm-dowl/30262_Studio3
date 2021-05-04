@@ -4,9 +4,12 @@
 <head>
   <title>Studio Week 3</title>
   <!-- Add Mapbox GL JS JavaScript file -->
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+
   <!-- Add in the Mapbox GL JS CSS file -->
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+
   <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
   <!-- Add CSS styling info for the map -->
   <style type="text/css">
@@ -47,19 +50,19 @@
   </div>
 
   <!-- Add a div to give the map somewhere to go -->
-  <div id='map'></div>
+  <div id='map' style='width: 400px; height: 300px;'></div>
 
   <script>
-    // access token
-    mapboxgl.accessToken = 'pk.eyJ1Ijoiam0tZG93bCIsImEiOiJja25rc2VvOTMwYzF0MnZudjltMGh0dWpwIn0.-UcF1LG4oAox3A9YWUWs7w';
+  // access token
+  mapboxgl.accessToken = 'pk.eyJ1Ijoiam0tZG93bCIsImEiOiJja25rc2VvOTMwYzF0MnZudjltMGh0dWpwIn0.-UcF1LG4oAox3A9YWUWs7w';
+  //initialize a map
+  var map = new mapboxgl.Map({
+  container: 'map',  // container id
+  style: 'mapbox://styles/mapbox/streets-v11'  // stylesheet location
+  center: [-73.8648, 40.8448], // starting position in Lexington, KY
+  zoom: 12 // starting zoom
+  });
 
-    //initialize a map
-    var map = new mapboxgl.Map({
-      container: 'map', // container id
-      style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
-      center: [-73.8648, 40.8448], // starting position in Lexington, KY
-      zoom: 12 // starting zoom
-    });
 
     // add hospital point feature as geojson
     var hospitals = {
