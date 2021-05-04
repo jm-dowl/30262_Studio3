@@ -58,7 +58,7 @@
        container: 'map',
        style: 'mapbox://styles/mapbox/streets-v11',
        center: [-73.911651, 40.898168],
-       zoom: 13
+       zoom: 15
     });
 
     // Add a popup: https://docs.mapbox.com/mapbox-gl-js/example/popup/
@@ -74,12 +74,12 @@
     //Add pop up that will only show at specified zoom level
     map.on('zoom', function(e){
       var zoomlevel = map.getZoom();
-      if(zoomlevel > 14){
+      if(zoomlevel > 16){
       popup.setLngLat([-73.911651, 40.898168])
-        .setHTML('<h1 style="text-align:center; font-size:16px; height:5px"><u>Mt. Washington</u></h1><h1 style="text-align:center; font-size:14px">Altitude: 6,288ft</h1>')
+        .setHTML('<h1 style="text-align:center; font-size:16px; height:5px"><u>Wave Hill</u></h1><h1 style="text-align:center; font-size:14px">A 28-acre garden center!</h1>')
         .addTo(map);
       };
-      if (zoomlevel < 14) {
+      if (zoomlevel < 16) {
         popup.remove();
         return;
       }
@@ -110,7 +110,7 @@
       //fly to Mount Washington
         map.flyTo({
             center: [-73.911651, 40.898168],
-            zoom: [15],
+            zoom: [17],
             bearing: 180,
             pitch: 1,
             essential: true // this animation is considered essential with respect to prefers-reduced-motion
